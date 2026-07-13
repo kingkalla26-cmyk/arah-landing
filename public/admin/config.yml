@@ -1,0 +1,43 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "gallery"
+    label: "גלריית תמונות"
+    files:
+      - file: "src/content/gallery.json"
+        label: "תמונות גלריה"
+        name: "gallery"
+        fields:
+          - label: "תמונות"
+            name: "images"
+            widget: "list"
+            fields:
+              - { label: "תמונה", name: "image", widget: "image" }
+              - { label: "תיאור (אופציונלי)", name: "alt", widget: "string", required: false }
+
+  - name: "settings"
+    label: "תוכן כללי"
+    files:
+      - file: "src/content/settings.json"
+        label: "הגדרות אתר"
+        name: "settings"
+        fields:
+          - { label: "טלפון", name: "phone", widget: "string" }
+          - { label: "מספר וואטסאפ (כולל קידומת 972)", name: "whatsapp", widget: "string" }
+          - { label: "באדג' עליון", name: "badgeText", widget: "string" }
+          - { label: "כותרת ראשית (Hero)", name: "heroTagline", widget: "string" }
+          - { label: "כותרת משנה (Hero)", name: "heroSub", widget: "string" }
+          - { label: "טקסט אודות", name: "aboutText", widget: "text" }
+          - { label: "טקסט תשוקה (הבלוק המודגש)", name: "passionText", widget: "text" }
+          - label: "חיות"
+            name: "animals"
+            widget: "list"
+            fields:
+              - { label: "אימוג'י", name: "emoji", widget: "string" }
+              - { label: "שם", name: "name", widget: "string" }
+              - { label: "הערה", name: "note", widget: "string" }
