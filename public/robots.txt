@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://effulgent-rolypoly-7a8b47.netlify.app/sitemap.xml

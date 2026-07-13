@@ -72,6 +72,11 @@ export default function App() {
         }
 
         * { margin:0; padding:0; box-sizing:border-box; }
+        .visually-hidden {
+          position:absolute; width:1px; height:1px;
+          padding:0; margin:-1px; overflow:hidden;
+          clip:rect(0,0,0,0); white-space:nowrap; border:0;
+        }
         html { scroll-behavior:smooth; }
         body {
           font-family:'Heebo',sans-serif;
@@ -491,6 +496,7 @@ export default function App() {
 
       <section className="hero">
         <div className="hero-content">
+          <h1 className="visually-hidden">ארה - סדנאות חיות עם אילה, בית שמש והאזור</h1>
           <div className="badge">{settings.badgeText}</div>
           <div className="hero-logo-wrap">
             <img src="/logo.jpeg" alt="ארה - סדנאות חוגים הפעלות" className="hero-logo-img" />
